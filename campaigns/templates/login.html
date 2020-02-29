@@ -44,6 +44,7 @@
           </div>
           <div class="card-body">
             <form method="POST">
+              {% csrf_token %}
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"
