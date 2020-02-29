@@ -5,9 +5,12 @@ from django.shortcuts import render
 
 # Create your views here.
 def login(request):
-    return render(request, "login.html")
-    # return HttpResponse("Login World")
+    if request.method == "GET":
+        return render(request, "login.html")
+    else:
+        # TODO: Kuchh karenge
+        return render(request, "login.html")
 
 
 def register(request):
-    return HttpResponse("Registr World")
+    return render(request, "register.html")
