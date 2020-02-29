@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Sare Campaigns yaha milenge</title>
+  </head>
+  <body>
+    <h1>Bhai contribute krde</h1>
+    <h2>Total Campaigns: {{ count }}</h2>
+    {% for campaign in campaigns %} {% if campaign.approved %}
+
+    <b>Title:</b> {{ campaign.title }}
+    <br />
+    <b>Amount:</b> {{ campaign.amount }}
+    <br />
+    <br />
+    {% endif %} {% endfor %}
+  </body>
+</html>

@@ -60,3 +60,10 @@ def new_campaign(request):
             return redirect('/campaigns')
     else:
         return redirect('/login')
+
+
+def list_campaigns(request):
+    campaigns = Campaign.objects.all()
+    campaigns_count = Campaign.objects.all().count()
+    context = {"campaigns": campaigns, "count": campaigns_count}
+    return render(request, "campaigns.html", context=context)
