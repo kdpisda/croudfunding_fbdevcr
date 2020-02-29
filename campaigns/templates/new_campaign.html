@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Naya campagin bana bhai</title>
+  </head>
+  <body>
+    Naya campaign
+    <h1>Naya campaign bana bhai</h1>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div>
+        <label>Title</label>
+        <input type="text" name="title" required />
+      </div>
+      <br />
+      <div>
+        <label>Description</label>
+        <textarea name="description"></textarea>
+      </div>
+      <br />
+      <div>
+        <label>
+          Amoung
+        </label>
+        <input type="number" name="amount" required />
+      </div>
+      <br />
+      <div>
+        <label>Start Time</label>
+        <input type="datetime" name="start_time" required />
+      </div>
+      <br />
+      <div>
+        <label>End Time</label>
+        <input type="datetime" name="end_time" required />
+      </div>
+      <div>
+        <label>Supporting Docs</label>
+        <input type="file" name="supporting_document" required />
+      </div>
+      <input name="Naya Camapign Banao" type="submit" />
+    </form>
+  </body>
+</html>
